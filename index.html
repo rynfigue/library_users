@@ -9,63 +9,39 @@
             font-family: Arial, sans-serif;
             font-size: 12px;
             text-align: center;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
         }
-
         h1, h2 {
-            margin: 10px 0;
+            text-align: center;
         }
-
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        h2 {
-            font-size: 18px;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
         .user-container {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             justify-content: center;
-            max-width: 1000px;
         }
-
         .user-card {
             border: 3px solid black;
-            padding: 15px;
-            text-align: center;
-            width: 250px;
-            background-color: white;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            padding: 10px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
         }
-
         .user-card img {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            border: 2px solid black;
+        }
+        .user-info {
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bulacan State University</h1>
-        <h2>Library Users</h2>
-        <div class="user-container" id="userList"></div>
-    </div>
+    <h1>Bulacan State University</h1>
+    <h2>Library Users</h2>
+    <div class="user-container" id="userList"></div>
 
     <script>
         fetch('ryanjacob_figueroa.xml')
@@ -81,15 +57,17 @@
                     let yearLevel = users[i].getElementsByTagName('year_level_section')[0].textContent;
                     let adviser = users[i].getElementsByTagName('adviser')[0].textContent;
                     let schoolYear = users[i].getElementsByTagName('school_year')[0].textContent;
-    
+
                     output += `
                         <div class="user-card">
+                            <div class="user-info">
+                                <p><strong>Name:</strong> ${name}</p>
+                                <p><strong>Course:</strong> ${course}</p>
+                                <p><strong>Year Level / Section:</strong> ${yearLevel}</p>
+                                <p><strong>Adviser:</strong> ${adviser}</p>
+                                <p><strong>School Year:</strong> ${schoolYear}</p>
+                            </div>
                             <img src="${picture}" alt="User Picture">
-                            <p><strong>Name:</strong> ${name}</p>
-                            <p><strong>Course:</strong> ${course}</p>
-                            <p><strong>Year Level / Section:</strong> ${yearLevel}</p>
-                            <p><strong>Adviser:</strong> ${adviser}</p>
-                            <p><strong>School Year:</strong> ${schoolYear}</p>
                         </div>
                     `;
                 }
