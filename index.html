@@ -23,18 +23,19 @@
             border: 3px solid black;
             padding: 10px;
             width: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             text-align: left;
+            position: relative; /* Needed for absolute positioning of image */
         }
         .user-card img {
-            width: 70px; /* Square shape */
+            width: 70px;
             height: 70px;
             object-fit: cover;
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
         .user-info {
-            flex-grow: 1;
+            padding-right: 90px; /* Prevents text from overlapping with the image */
         }
     </style>
 </head>
@@ -60,6 +61,7 @@
 
                     output += `
                         <div class="user-card">
+                            <img src="${picture}" alt="User Picture">
                             <div class="user-info">
                                 <p><strong>Name:</strong> ${name}</p>
                                 <p><strong>Course:</strong> ${course}</p>
@@ -67,7 +69,6 @@
                                 <p><strong>Adviser:</strong> ${adviser}</p>
                                 <p><strong>School Year:</strong> ${schoolYear}</p>
                             </div>
-                            <img src="${picture}" alt="User Picture">
                         </div>
                     `;
                 }
