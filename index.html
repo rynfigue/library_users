@@ -8,29 +8,64 @@
         body {
             font-family: Arial, sans-serif;
             font-size: 12px;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
         }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
         .user-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
             justify-content: center;
+            max-width: 1000px;
         }
+
         .user-card {
             border: 3px solid black;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
             width: 250px;
+            background-color: white;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
+
         .user-card img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
+            border: 2px solid black;
         }
     </style>
 </head>
 <body>
-    <h2>Library Users</h2>
-    <div class="user-container" id="userList"></div>
+    <div class="container">
+        <h1>Bulacan State University</h1>
+        <h2>Library Users</h2>
+        <div class="user-container" id="userList"></div>
+    </div>
 
     <script>
         fetch('ryanjacob_figueroa.xml')
@@ -61,3 +96,5 @@
                 document.getElementById('userList').innerHTML = output;
             });
     </script>
+</body>
+</html>
