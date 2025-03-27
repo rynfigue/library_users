@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        .user-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .user-card {
+            border: 3px solid black;
+            padding: 10px;
+            text-align: center;
+            width: 250px;
+        }
+        .user-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Library Users</h2>
+    <div class="user-container" id="userList"></div>
+
+    <script>
+        fetch('ryanjacob_figueroa.xml')
+            .then(response => response.text())
+            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+            .then(data => {
+                const users = data.getElementsByTagName('user');
+                let output = '';
+                for (let i = 0; i < users.length; i++) {
+                    let picture = users[i].getElementsByTagName('picture')[0].textContent;
+                    let name = users[i].getElementsByTagName('name')[0].textContent;
+                    let course = users[i].getElementsByTagName('course')[0].textContent;
+                    let yearLevel = users[i].getElementsByTagName('year_level_section')[0].textContent;
+                    let adviser = users[i].getElementsByTagName('adviser')[0].textContent;
+                    let schoolYear = users[i].getElementsByTagName('school_year')[0].textContent;
+    
+                    output += `
+                        <div class="user-card">
+                            <img src="${picture}" alt="User Picture">
+                            <p><strong>Name:</strong> ${name}</p>
+                            <p><strong>Course:</strong> ${course}</p>
+                            <p><strong>Year Level / Section:</strong> ${yearLevel}</p>
+                            <p><strong>Adviser:</strong> ${adviser}</p>
+                            <p><strong>School Year:</strong> ${schoolYear}</p>
+                        </div>
+                    `;
+                }
+                document.getElementById('userList').innerHTML = output;
+            });
+    </script>

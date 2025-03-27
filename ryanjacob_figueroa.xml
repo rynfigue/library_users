@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library_users>
+    <user>
+        <picture>student1.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student2.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student3.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student4.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student5.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student6.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student7.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student8.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student9.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+    <user>
+        <picture>student10.jpg</picture>
+        <name>Juan Dela Cruz</name>
+        <course>BSIT</course>
+        <year_level_section>3bg2</year_level_section>
+        <adviser>Mr. Ramon Dela Cruz</adviser>
+        <school_year>2025-2026</school_year>
+    </user>
+</library_users>
